@@ -1,9 +1,5 @@
+import { NavigationChildInterface } from "../../../config/Interface"
 import NavigationItem from "./NavigationItem"
-
-export interface NavigationChildInterface {
-  className:string,
-  responsivePopUp:boolean
-}
 
 export default function NavigationChild(prop:NavigationChildInterface){
   return (
@@ -14,4 +10,3 @@ export default function NavigationChild(prop:NavigationChildInterface){
     </div>
   )
 }
-
