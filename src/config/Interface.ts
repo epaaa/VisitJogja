@@ -11,3 +11,7 @@ export interface NavigationItemInterface{
 export interface NavigationPopUpInterface{
     option:string[]
 }
+
+export interface NavigationTemplateItemInterface{
+    text:string
+}
