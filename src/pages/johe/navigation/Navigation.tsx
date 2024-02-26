@@ -14,9 +14,9 @@ export default function Navigation() {
   }
 
   return (
-    <div className={`select-none absolute top-0 w-screen bg-yellow px-10 py-4 ${responsivePopUp ? 'h-screen' : ''}`}>
+    <div className={`select-none bg-yellow px-14 py-6 ${responsivePopUp ? 'h-screen' : ''}`}>
       <div className="flex justify-between items-center">
-        <div className="text-2xl font-bold">JOGJAﾟIN</div>
+        <div className="cursor-pointer text-2xl font-semibold hover:font-bold">JOGJAﾟIN</div>
         <div onClick={toggleResponsivePopUp} className="md:hidden block">
           { !responsivePopUp ? <i className="fa-solid fa-bars"></i> : <i className="fa-solid fa-x"></i> }
         </div>
