@@ -16,7 +16,7 @@ export interface NavigationTemplateItemInterface{
     text:string
 }
 
-export interface ListPageAbstractInfromationTemplateInterface{
+export interface AbstractInfromationTemplateInterface{
     title:string,
     description:string
 }

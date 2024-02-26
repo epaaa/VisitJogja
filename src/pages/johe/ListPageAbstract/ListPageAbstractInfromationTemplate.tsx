@@ -1,6 +1,6 @@
-import { ListPageAbstractInfromationTemplateInterface } from "../../../config/Interface";
+import { AbstractInfromationTemplateInterface } from "../../../config/Interface";
 
-export default function ListPageAbstractInfromationTemplate(prop:ListPageAbstractInfromationTemplateInterface) {
+export default function ListPageAbstractInfromationTemplate(prop:AbstractInfromationTemplateInterface) {
   return (
     <div className="max-w-[800px] grid gap-5 p-5">
         <div className="text-5xl font-semibold text-center">{prop.title}</div>
