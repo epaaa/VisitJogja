@@ -14,13 +14,15 @@ export default function Navigation() {
   }
 
   return (
-    <div className={`select-none bg-yellow px-14 py-6 ${responsivePopUp ? 'h-screen' : ''}`}>
+    <div className={`select-none bg-yellow px-14 ${responsivePopUp ? 'h-screen' : ''}`}>
       <div className="flex justify-between items-center">
-        <div className="cursor-pointer text-2xl font-semibold hover:font-bold">JOGJAﾟIN</div>
-        <div onClick={toggleResponsivePopUp} className="md:hidden block">
+        <div className="h-20 flex items-center">
+          <div className="cursor-pointer text-2xl font-semibold hover:font-bold">JOGJAﾟIN</div>
+        </div>
+        <div onClick={toggleResponsivePopUp} className="max-tablet:block hidden">
           { !responsivePopUp ? <i className="fa-solid fa-bars"></i> : <i className="fa-solid fa-x"></i> }
         </div>
-        <NavigationChild responsivePopUp={responsivePopUp} className="md:flex hidden gap-10" />
+        <NavigationChild responsivePopUp={responsivePopUp} className="max-tablet:hidden flex gap-2" />
       </div>
       { !responsivePopUp ? null : <NavigationChild responsivePopUp={responsivePopUp} className="mt-10 grid gap-2" /> }
     </div>
