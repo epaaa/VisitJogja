@@ -15,3 +15,8 @@ export interface NavigationPopUpInterface{
 export interface NavigationTemplateItemInterface{
     text:string
 }
+
+export interface ListPageAbstractInfromationTemplateInterface{
+    title:string,
+    description:string
+}
