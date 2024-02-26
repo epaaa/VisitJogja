@@ -1,4 +1,4 @@
-import { NavigationTemplateItemInterface } from "../../../../config/Interface";
+import { NavigationTemplateItemInterface } from "../../../config/Interface";
 
 export default function NavigationTemplateItem(prop:NavigationTemplateItemInterface) {
   return (
