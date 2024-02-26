@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { NavigationItemInterface } from "../../../config/Interface"
 import NavigationPopUp from "./NavigationPopUp"
 import NavigationTemplateItem from "./template/NavigationTemplateItem"
 import NavigationPopUpMobile from "./NavigationPopUpMobile"
+import { NavigationItemInterface } from "../../config/Interface"
 
 export default function NavigationItem(prop:NavigationItemInterface) {
   

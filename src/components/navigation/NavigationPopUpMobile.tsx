@@ -1,4 +1,4 @@
-import { NavigationPopUpInterface } from "../../../config/Interface";
+import { NavigationPopUpInterface } from "../../config/Interface";
 import NavigationTemplateItem from "./template/NavigationTemplateItem";
 
 export default function NavigationPopUpMobile(prop:NavigationPopUpInterface) {

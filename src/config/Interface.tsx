@@ -20,3 +20,5 @@ export interface AbstractInfromationTemplateInterface{
     title:string,
     description:string
 }
+
+export default interface DefaultInterface {}
