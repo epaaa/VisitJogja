@@ -7,10 +7,13 @@ export default {
   theme: {
     extend: {},
     colors:{
-      "cream":"#fdf5ea",
-      "yellow":"#eec456",
-      "brown":"#3F3B38",
-      "green":"#97bb61"
+      cream:"#fdf5ea",
+      yellow:"#eec456",
+      brown:"#3F3B38",
+      green:"#97bb61"
+    },
+    fontFamily:{
+      body:["Poppins"]
     }
   },
   plugins: [],
