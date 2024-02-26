@@ -14,7 +14,7 @@ export default function Navigation() {
   }
 
   return (
-    <div className={`select-none z-20 bg-yellow px-14 ${responsivePopUp ? 'h-screen' : ''}`}>
+    <div className={`max-tablet:relative select-none z-20 bg-yellow px-14 ${responsivePopUp ? 'h-screen' : ''}`}>
       <div className="flex justify-between items-center">
         <div className="h-20 flex items-center">
           <div className="cursor-pointer text-2xl font-semibold hover:font-bold">JOGJAﾟIN</div>
