@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './App';
-import Johe from './page/Johe';
-import Eva from './page/Eva';
-import Michael from './page/Michael';
+import Johe from './pages/johe/Johe';
+import Eva from './pages/eva/Eva';
+import Michael from './pages/michael/Michael';
 
 const router = createBrowserRouter([
   {
