@@ -6,6 +6,7 @@ import App from './App';
 import Johe from './pages/johe/Johe';
 import Eva from './pages/eva/Eva';
 import Michael from './pages/michael/Michael';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <ParallaxProvider>
+        <RouterProvider router={router} />
+      </ParallaxProvider>
   </React.StrictMode>,
 )
