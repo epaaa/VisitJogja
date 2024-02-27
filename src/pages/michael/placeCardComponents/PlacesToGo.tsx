@@ -13,8 +13,8 @@ export default function PlacesToGo() {
   return (
     <>
       <div className="flex gap-4 justify-center">
-        <div className="text-4xl font-bold w-fit mt-6 max-tablet:px-5">PLACES TO DISCOVER</div>
-        <i className="fa-solid fa-arrow-right text-3xl mt-7 ml-3"></i>
+        <div className="text-4xl font-bold w-fit mt-6 text-brown max-tablet:px-5">PLACES TO DISCOVER</div>
+        <i className="fa-solid fa-arrow-right text-3xl mt-7 ml-3 text-brown"></i>
       </div>
 
       <div className="flex flex-col gap-4 justify-center">
