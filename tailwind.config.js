@@ -21,5 +21,5 @@ export default {
       'laptop': '1000px'
     }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

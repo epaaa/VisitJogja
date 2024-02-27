@@ -1,4 +1,4 @@
-import { NavigationChildInterface } from "../../../config/Interface"
+import { NavigationChildInterface } from "../../config/Interface"
 import NavigationItem from "./NavigationItem"
 
 export default function NavigationChild(prop:NavigationChildInterface){

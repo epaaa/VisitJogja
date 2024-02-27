@@ -15,3 +15,10 @@ export interface NavigationPopUpInterface{
 export interface NavigationTemplateItemInterface{
     text:string
 }
+
+export interface AbstractInfromationTemplateInterface{
+    title:string,
+    description:string
+}
+
+export default interface DefaultInterface {}
