@@ -1,4 +1,4 @@
-import PlacesToGo from './PlacesToGo'
+import PlacesToGo from './placeCardComponents/PlacesToGo'
 
 export default function Michael() {
   return (
