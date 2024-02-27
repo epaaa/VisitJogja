@@ -1,24 +1,23 @@
-import landmarks from '../../../assets/places_to_go/landmarks.png';
-import cuisine from '../../../assets/places_to_go/cuisine.png';
-import culture from '../../../assets/places_to_go/cultures.jpg';
-import accommodation from '../../../assets/places_to_go/accomodation.png';
-import nature from '../../../assets/places_to_go/nature.jpg';
 import PlaceCard from './PlaceCard';
 
 export default function PlacesToGo() {
-
+  const landmarks = "../../../../public/places_to_go/landmarks.png"
+  const cuisine = "../../../../public/places_to_go/cuisine.png"
+  const accommodation = '../../../../public/places_to_go/accomodation.png';
+  const nature = '../../../../public/places_to_go/nature.jpg';
+  const culture = '../../../../public/places_to_go/cultures.jpg';
   const placesPics = [landmarks, culture, cuisine, accommodation, nature];
   const placesNames = ["LANDMARKS", "CULTURE", "NATURE", "CUISINE", "DWELLINGS"];
 
   return (
     <>
-      <div className="flex gap-4 justify-center">
-        <div className="text-4xl font-bold w-fit mt-6 text-brown max-tablet:px-5">PLACES TO DISCOVER</div>
-        <i className="fa-solid fa-arrow-right text-3xl mt-7 ml-3 text-brown"></i>
+      <div className="flex gap-2 justify-center">
+        <div className="text-4xl font-bold mt-6 text-brown max-tablet:px-5 max-mobile:px-2">PLACES TO DISCOVER</div>
+        <i className="fa-solid fa-arrow-right text-3xl mt-7 text-brown"></i>
       </div>
 
       <div className="flex flex-col gap-4 justify-center">
-        <div className="flex justify-center gap-4 mt-24 max-mobile:flex-wrap">
+        <div className="flex justify-center gap-4 mt-8 max-mobile:flex-wrap">
 
           <PlaceCard placeName={placesNames[0]} placePic={placesPics[0]}/>
           <PlaceCard placeName={placesNames[1]} placePic={placesPics[1]}/>
