@@ -7,7 +7,7 @@ export default function PlacesToGo() {
   const nature = '../../../../public/places_to_go/nature.jpg';
   const culture = '../../../../public/places_to_go/cultures.jpg';
   const placesPics = [landmarks, culture, cuisine, accommodation, nature];
-  const placesNames = ["LANDMARKS", "CULTURE", "NATURE", "CUISINE", "DWELLINGS"];
+  const placesNames = ["LANDMARKS", "CULTURE", "CUISINE", "NATURE", "DWELLINGS"];
 
   return (
     <>
@@ -25,9 +25,9 @@ export default function PlacesToGo() {
         </div>
         <div className="flex justify-center gap-4 max-mobile:flex-wrap">
           
-          <PlaceCard placeName={placesNames[2]} placePic={placesPics[2]}/>
-          <PlaceCard placeName={placesNames[3]} placePic={placesPics[3]}/>
-          <PlaceCard placeName={placesNames[4]} placePic={placesPics[4]}/>
+          <PlaceCard placeName={placesNames[2]} placePic={cuisine}/>
+          <PlaceCard placeName={placesNames[3]} placePic={placesPics[4]}/>
+          <PlaceCard placeName={placesNames[4]} placePic={placesPics[3]}/>
 
         </div>
       </div>
