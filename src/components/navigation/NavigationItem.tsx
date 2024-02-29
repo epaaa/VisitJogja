@@ -7,7 +7,7 @@ import { NavigationItemInterface } from "../../config/Interface"
 export default function NavigationItem(prop:NavigationItemInterface) {
   
   const navigationDic:{[key:string]:string[]} = {
-    'Places to Go' :['Accomodation','Culture','Cuisine','Landmark','Nature'],
+    'Places to Go' :['Accommodation','Culture','Cuisine','Landmark','Nature'],
     'Things to Do' :['Outdoor','Indoor'],
     'Budget Calculator' :[],
   }

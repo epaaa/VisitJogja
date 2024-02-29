@@ -6,6 +6,7 @@ import { DataContext } from "./config/DataContext"
 import ListPage from "./pages/list/ListPage"
 import useGetData from "./hooks/useGetData"
 import Loading from "./components/loading/Loading"
+import Navigation from "./components/navigation/Navigation"
 
 const router = createBrowserRouter([
   {
@@ -50,14 +51,17 @@ export default function App() {
 
 function DefaultPage(){
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-      <div className="grid">
-        <br/>
-        <Link className="text-yellow" to='/eva'>eva</Link>
-        <Link className="text-green" to='/list/placesToGo/Culture'>testing accommodation</Link>
-        <Link className="text-brown" to='/michael'>michael</Link>
-      </div>
-    </h1>
+    <>
+      <Navigation/>
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+        <div className="grid">
+          <br/>
+          <Link className="text-yellow" to='/eva'>eva</Link>
+          <Link className="text-green" to='/list/placesToGo/Culture'>testing accommodation</Link>
+          <Link className="text-brown" to='/michael'>michael</Link>
+        </div>
+      </h1>
+    </>
   )
 }

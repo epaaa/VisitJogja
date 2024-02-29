@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import ListCardItem from "./ListCardItem";
 import { useContext, useEffect, useState } from "react";
-import { DataContext } from "../../../config/DataContext";
-import { DataInterface } from "../../../config/Interface";
+import { DataContext } from "../../config/DataContext";
+import { DataInterface } from "../../config/Interface";
 
 export default function ListCard() {
 
