@@ -25,9 +25,9 @@ export default function ListCardItem(prop:DataInterface) {
 
           {
             prop.address === '' ? null : 
-            <div className="flex items-center justify-start gap-4">
+            <div className="flex items-center justify-start gap-4 truncate">
               <i className="fa-solid fa-location-dot"></i>
-              <div className="">{prop.address}</div>
+              <div className="truncate">{prop.address}</div>
             </div>
           }
 
