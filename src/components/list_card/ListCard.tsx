@@ -14,7 +14,7 @@ export default function ListCard() {
       const dataArr = nav === 'placesToGo' ? dataContext.places : dataContext.things
       const dataFilter = dataArr.filter((item:DataInterface) => item.navbarChild === navChild)
       setData(dataFilter)
-  },[dataContext.places, dataContext.things])
+  },[dataContext.places, dataContext.things, nav, navChild])
 
   return (
     <div className="p-10 grid justify-center gap-5">
@@ -24,11 +24,11 @@ export default function ListCard() {
         </div>
 
         <div className="grid justify-center grid-cols-3 max-tablet:grid-cols-2 max-mobile:grid-cols-1 items-center gap-9 w-fit">
-            {
-              data.map((item:DataInterface, i:number) => (
-                <ListCardItem {...item} key={i}/>
-              ))
-            }
+          {
+            data.map((item:DataInterface, i:number) => (
+              <ListCardItem {...item} key={i}/>
+            ))
+          }
         </div>
     </div>
   )
