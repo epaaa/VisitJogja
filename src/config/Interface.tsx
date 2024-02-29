@@ -21,6 +21,20 @@ export interface AbstractInfromationTemplateInterface{
     description:string
 }
 
-export interface DataContextInterface {
-
+export interface DataInterface {
+    id:string,
+    name:string,
+    address:string,
+    description:string,
+    profile:string,
+    image:string,
+    price:number,
+    navbar:string,
+    navbarChild:string
 }
+
+export interface DataContextInterface {
+    places:DataInterface[],
+    things:DataInterface[]
+}
+

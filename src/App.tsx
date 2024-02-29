@@ -1,7 +1,11 @@
-import { Link, RouterProvider, createBrowserRouter } from "react-router-dom";
-import Johe from "./pages/johe/Johe";
-import Eva from "./pages/eva/Eva";
-import Michael from "./pages/michael/Michael";
+import { Link, RouterProvider, createBrowserRouter } from "react-router-dom"
+import Johe from "./pages/johe/Johe"
+import Eva from "./pages/eva/Eva"
+import Michael from "./pages/michael/Michael"
+import { DataContext } from "./config/DataContext"
+import ListPage from "./pages/list/ListPage"
+import useGetData from "./hooks/useGetData"
+import Loading from "./components/loading/Loading"
 
 const router = createBrowserRouter([
   {
@@ -20,11 +24,27 @@ const router = createBrowserRouter([
     path: '/michael',
     element: <Michael/>,
   },
-]);
+  {
+    path: '/list/:nav/:navChild',
+    element: <ListPage/>
+  }
+])
 
 export default function App() {
+
+  const { places, things, loading } = useGetData()
+
+  const val = {
+    places,
+    things
+  }
+
+  if(loading) return <Loading/>
+  
   return (
-    <RouterProvider router={router} />
+    <DataContext.Provider value={val}>
+      <RouterProvider router={router} />
+    </DataContext.Provider>
   ) 
 }
 
@@ -35,7 +55,7 @@ function DefaultPage(){
       <div className="grid">
         <br/>
         <Link className="text-yellow" to='/eva'>eva</Link>
-        <Link className="text-green" to='/johe'>johe</Link>
+        <Link className="text-green" to='/list/placesToGo/Culture'>testing accommodation</Link>
         <Link className="text-brown" to='/michael'>michael</Link>
       </div>
     </h1>
