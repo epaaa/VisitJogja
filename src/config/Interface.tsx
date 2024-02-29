@@ -21,4 +21,6 @@ export interface AbstractInfromationTemplateInterface{
     description:string
 }
 
-export default interface DefaultInterface {}
+export interface DataContextInterface {
+
+}
