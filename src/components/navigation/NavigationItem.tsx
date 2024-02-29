@@ -3,6 +3,7 @@ import NavigationPopUp from "./NavigationPopUp"
 import NavigationTemplateItem from "./template/NavigationTemplateItem"
 import NavigationPopUpMobile from "./NavigationPopUpMobile"
 import { NavigationItemInterface } from "../../config/Interface"
+import NavigationTemplateItemMobile from "./template/NavigationTemplateItemMobile"
 
 export default function NavigationItem(prop:NavigationItemInterface) {
   
@@ -28,7 +29,7 @@ export default function NavigationItem(prop:NavigationItemInterface) {
     return (
       <>
         <div onClick={handlePopUpMobile}>
-          <NavigationTemplateItem text={prop.text}/>
+          <NavigationTemplateItemMobile text={prop.text}/>
         </div>
         {
           !popUpOptionMobile || navigationDic[prop.text!].length === 0 ? null :
