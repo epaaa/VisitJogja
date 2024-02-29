@@ -3,7 +3,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="w-fit h-[1300px] max-mobile:h-[450px] bg-yellow">
+      <div className="w-fit h-[1000px] max-mobile:h-[450px] bg-yellow">
         <div className="relative h-[1300px]">
 
           {/* gunung */}
