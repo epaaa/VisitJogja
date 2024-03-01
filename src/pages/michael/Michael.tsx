@@ -1,5 +1,5 @@
 import PlacesToGo from './placeCardComponents/PlacesToGo'
-import ThingsToDo from './ThingsToDo'
+import ThingsToDo from './thingsToDoComponents/ThingsToDo'
 import HomePage from './HomePage'
 import Navigation from '../../components/navigation/Navigation'
 
