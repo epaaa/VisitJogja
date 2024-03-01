@@ -3,11 +3,12 @@ import NavigationPopUp from "./NavigationPopUp"
 import NavigationTemplateItem from "./template/NavigationTemplateItem"
 import NavigationPopUpMobile from "./NavigationPopUpMobile"
 import { NavigationItemInterface } from "../../config/Interface"
+import NavigationTemplateItemMobile from "./template/NavigationTemplateItemMobile"
 
 export default function NavigationItem(prop:NavigationItemInterface) {
   
   const navigationDic:{[key:string]:string[]} = {
-    'Places to Go' :['Accomodation','Culture','Cuisine','Landmark','Nature'],
+    'Places to Go' :['Accommodation','Culture','Cuisine','Landmark','Nature'],
     'Things to Do' :['Outdoor','Indoor'],
     'Budget Calculator' :[],
   }
@@ -28,7 +29,7 @@ export default function NavigationItem(prop:NavigationItemInterface) {
     return (
       <>
         <div onClick={handlePopUpMobile}>
-          <NavigationTemplateItem text={prop.text}/>
+          <NavigationTemplateItemMobile text={prop.text}/>
         </div>
         {
           !popUpOptionMobile || navigationDic[prop.text!].length === 0 ? null :
