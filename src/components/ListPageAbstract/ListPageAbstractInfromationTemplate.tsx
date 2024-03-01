@@ -1,4 +1,4 @@
-import { AbstractInfromationTemplateInterface } from "../../../config/Interface";
+import { AbstractInfromationTemplateInterface } from "../../config/Interface";
 
 export default function ListPageAbstractInfromationTemplate(prop:AbstractInfromationTemplateInterface) {
   return (
