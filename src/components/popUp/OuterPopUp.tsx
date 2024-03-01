@@ -26,33 +26,36 @@ export default function OuterPopUp() {
         </div>
         {isPopupVisible && 
         <div>
-            <div className="z-40 fixed inset-0 bg-brown bg-opacity-50"></div>
-            <div className="bg-cream m-20 z-50 fixed inset-0 p-8 rounded-lg shadow-lg overflow-hidden">
-                <button
-                    onClick={onClose}
-                    className="absolute top-4 right-4 text-brown"
-                >
-                {/* Replace this with your close SVG icon */}
-                <i className="fa-solid fa-xmark fa-2xl"></i>
-                </button>
+            <div className="flex z-40 fixed inset-0 bg-brown bg-opacity-50"></div>
+            <div className="flex">            
+                <div className="flex shrink-0 bg-cream m-5 z-50 fixed inset-0 p-8 rounded-lg shadow-lg overflow-hidden">
+                    <button
+                        onClick={onClose}
+                        className="absolute top-4 right-4 text-brown"
+                    >
+                    {/* Replace this with your close SVG icon */}
+                    <i className="fa-solid fa-xmark fa-xl"></i>
+                    </button>
 
-                <div className=''>
-                    <div className="flex flex-col h-screen w-full">
-                        <img
-                        src={imageSrc} // Replace with the actual link to your picture
-                        alt="image"
-                        className="w-full object-cover object-center h-[300px]"
-                        />
+                    <div className="flex flex-col w-full">
+                        <div className="h-1/3  bg-brown">
+                            <img
+                            src={imageSrc} // Replace with the actual link to your picture
+                            alt="image"
+                            className="w-full object-cover object-center h-full"
+                            />
+                        </div>
                         
-                        <div className="p-12 overflow-auto text-brown text-left">
-                            <h1 className="text-4xl font-bold mb-4">{title}</h1>
-                            <div className="text-justify">
+                        <div className="flex flex-col flex-1 h-2/3 w-full p-5 overflow-auto text-brown text-left ">
+                            <h1 className="text-2xl font-bold mb-4">{title}</h1>
+                            <div className="text-sm text-justify">
                             <FormatDescription desc={description}/>
-                            </div>            
+                            </div>    
                         </div>     
                         
                     </div>
                 </div>
+
             </div>
 
         </div>}
