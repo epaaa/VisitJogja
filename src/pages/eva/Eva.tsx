@@ -5,8 +5,8 @@ function Eva() {
   
   return (
     <div className="">
-      <OuterPopUp/>
       <Navigation/>
+      <OuterPopUp/>
     </div>
   )
 }
