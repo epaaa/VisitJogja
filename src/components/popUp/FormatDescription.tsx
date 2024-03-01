@@ -1,4 +1,4 @@
-import React from "react";
+
 
 export default function FormatDescription({ desc }: { desc: string }) {
     function formatDesc(desc: string) {
