@@ -1,12 +1,12 @@
 import Navigation from '../../components/navigation/Navigation';
-import OuterPopUp from '../../components/popUp/OuterPopUp';
+import Hanoman from '../../components/hanoman/hanoman';
 
 function Eva() {
   
   return (
     <div className="">
       <Navigation/>
-      <OuterPopUp/>
+      <Hanoman/>
     </div>
   )
 }
