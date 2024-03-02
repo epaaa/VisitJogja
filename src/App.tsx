@@ -6,7 +6,7 @@ import ListPage from "./pages/list/ListPage"
 import useGetData from "./hooks/useGetData"
 import Loading from "./components/loading/Loading"
 import Navigation from "./components/navigation/Navigation"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const router = createBrowserRouter([
   {
