@@ -38,3 +38,13 @@ export interface DataContextInterface {
     things:DataInterface[]
 }
 
+export interface PlaceCardInterface {
+    placeName: string;
+    placePic:  string;
+} 
+
+export interface ThingsToDoSectionInterface {
+    activityType: string;
+    activityDesc: string;
+    isOutdoor: boolean;
+  }
