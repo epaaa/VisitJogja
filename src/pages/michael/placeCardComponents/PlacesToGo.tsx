@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import AnimatedBox from '../SpringAni';
 import PlaceCard from './PlaceCard';
 import { useParallax } from 'react-scroll-parallax';
 
@@ -25,7 +25,8 @@ export default function PlacesToGo() {
             src="../../../../public/food/sate.png" 
             className="w-[120px] h-[120px] transition duration-300 ease-in-out transform hover:scale-125" alt="" />
         </div> */}
-        <div className="text-4xl font-bold mt-6 text-brown max-tablet:px-5 max-mobile:px-2">PLACES TO DISCOVER</div>
+        <div className="m-8 text-4xl font-bold mt-6 text-brown max-tablet:px-5 max-mobile:px-2">PLACES TO DISCOVER</div>
+        
         <i className="fa-solid fa-arrow-right text-3xl mt-7 text-brown"></i>
       </div>
       
@@ -36,7 +37,7 @@ export default function PlacesToGo() {
           <PlaceCard placeName={placesNames[1]} placePic={placesPics[1]}/>
           
         </div>
-        <div className="flex justify-center gap-4 max-mobile:flex-wrap">
+        <div className="flex justify-center gap-4 max-mobile:flex-wrap ">
           
           <PlaceCard placeName={placesNames[2]} placePic={cuisine}/>
           <PlaceCard placeName={placesNames[3]} placePic={placesPics[4]}/>
