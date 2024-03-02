@@ -1,6 +1,5 @@
 import { useState } from "react"
 import NavigationPopUp from "./NavigationPopUp"
-import NavigationTemplateItem from "./template/NavigationTemplateItem"
 import NavigationPopUpMobile from "./NavigationPopUpMobile"
 import { NavigationItemInterface } from "../../config/Interface"
 import NavigationTemplateItemMobile from "./template/NavigationTemplateItemMobile"

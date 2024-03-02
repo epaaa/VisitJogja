@@ -35,6 +35,9 @@ export interface DataInterface {
 
 export interface DataContextInterface {
     places:DataInterface[],
-    things:DataInterface[]
+    things:DataInterface[],
+    responsivePopUp:boolean, 
+    setResponsivePopUp?:(e:boolean)=>void,
+    toggleResponsivePopUp:()=>void
 }
 

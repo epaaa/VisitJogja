@@ -1,5 +1,4 @@
 import { Link, RouterProvider, createBrowserRouter } from "react-router-dom"
-import Johe from "./pages/johe/Johe"
 import Eva from "./pages/eva/Eva"
 import Michael from "./pages/michael/Michael"
 import { DataContext } from "./config/DataContext"
@@ -7,15 +6,12 @@ import ListPage from "./pages/list/ListPage"
 import useGetData from "./hooks/useGetData"
 import Loading from "./components/loading/Loading"
 import Navigation from "./components/navigation/Navigation"
+import { useEffect, useState } from "react"
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <DefaultPage/>,
-  },
-  {
-    path: '/johe',
-    element: <Johe/>,
   },
   {
     path: '/eva',
@@ -33,11 +29,27 @@ const router = createBrowserRouter([
 
 export default function App() {
 
+  // fetch data
   const { places, things, loading } = useGetData()
+
+  // for responsive
+  const [responsivePopUp, setResponsivePopUp] = useState(false)
+
+  function toggleResponsivePopUp() {
+    setResponsivePopUp(!responsivePopUp)
+    if (!responsivePopUp) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }
 
   const val = {
     places,
-    things
+    things,
+    responsivePopUp, 
+    setResponsivePopUp,
+    toggleResponsivePopUp
   }
 
   if(loading) return <Loading/>
