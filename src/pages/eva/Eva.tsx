@@ -1,14 +1,12 @@
 import Navigation from '../../components/navigation/Navigation';
-import FooterBudgetin from '../../components/footer/FooterBudgetin';
-import FooterHome from '../../components/footer/FooterHome';
-import FooterList from '../../components/footer/FooterList';
+import Hanoman from '../../components/hanoman/hanoman';
 
 function Eva() {
   
   return (
     <div className="">
       <Navigation/>
-      <FooterBudgetin/>
+      <Hanoman/>
     </div>
   )
 }
