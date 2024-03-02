@@ -9,8 +9,11 @@ export default function ThingsToDo() {
         <i className="fa-solid fa-arrow-down text-3xl mt-7 text-brown"></i>
       </div>
 
-      <ThingsToDoSection activityType="OUTDOOR" activityDesc="Some activities are best done indoor!"/>
-      <ThingsToDoSection activityType="INDOOR" activityDesc="Some activities are best done outdoor!"/>
+      <div className="mt-5">
+        <ThingsToDoSection activityType="OUTDOOR" activityDesc="Some activities are best done indoor!" isOutdoor={true}/>
+        <ThingsToDoSection activityType="INDOOR" activityDesc="Some activities are best done outdoor!" isOutdoor={false}/>
+      </div>
+        
     </>
   )
 }

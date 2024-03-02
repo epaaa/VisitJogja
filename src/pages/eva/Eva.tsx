@@ -1,5 +1,14 @@
-export default function Eva() {
+import Navigation from '../../components/navigation/Navigation';
+import Hanoman from '../../components/hanoman/hanoman';
+
+function Eva() {
+  
   return (
-    <div>Eva</div>
+    <div className="">
+      <Navigation/>
+      <Hanoman/>
+    </div>
   )
 }
+
+export default Eva

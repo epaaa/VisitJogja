@@ -41,3 +41,13 @@ export interface DataContextInterface {
     toggleResponsivePopUp:()=>void
 }
 
+export interface PlaceCardInterface {
+    placeName: string;
+    placePic:  string;
+} 
+
+export interface ThingsToDoSectionInterface {
+    activityType: string;
+    activityDesc: string;
+    isOutdoor: boolean;
+  }
