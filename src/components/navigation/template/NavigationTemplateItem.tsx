@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { NavigationTemplateItemInterface } from "../../../config/Interface"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { DataContext } from "../../../config/DataContext"
 
 export default function NavigationTemplateItem(prop:NavigationTemplateItemInterface) {
 
@@ -27,8 +28,14 @@ export default function NavigationTemplateItem(prop:NavigationTemplateItemInterf
     }
   },[])
 
+  const dataContext = useContext(DataContext)
+  
+  function handleClosePopUpMobile() {
+    if(dataContext.responsivePopUp) dataContext.toggleResponsivePopUp()
+  }
+
   return (
-    <Link to={`/list/${nav}/${prop.text}`} className="flex items-center justify-between cursor-pointer text-lg font-medium hover:font-bold">
+    <Link onClick={handleClosePopUpMobile} to={`/list/${nav}/${prop.text}`} className="flex items-center justify-between cursor-pointer text-lg font-medium hover:font-bold">
         <div className="">{prop.text}</div>
         <div className="fa-solid fa-arrow-right"></div>
     </Link>

@@ -35,7 +35,11 @@ export interface DataInterface {
 
 export interface DataContextInterface {
     places:DataInterface[],
-    things:DataInterface[]
+    things:DataInterface[],
+    responsivePopUp:boolean, 
+    setResponsivePopUp?:(e:boolean)=>void,
+    toggleResponsivePopUp:()=>void,
+    imageDic:Dictionary<string>
 }
 
 export interface PlaceCardInterface {
@@ -47,4 +51,8 @@ export interface ThingsToDoSectionInterface {
     activityType: string;
     activityDesc: string;
     isOutdoor: boolean;
-  }
+}
+
+export interface Dictionary<T> {
+    [key:string]:T
+}

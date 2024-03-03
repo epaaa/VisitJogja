@@ -3,7 +3,10 @@ import { DataContextInterface } from "./Interface";
 
 const DefaultDataContext = {
     places:[],
-    things:[]
+    things:[],
+    responsivePopUp:false,
+    toggleResponsivePopUp:()=>{},
+    imageDic:{}
 }
 
 export const DataContext = createContext<DataContextInterface>(DefaultDataContext)
