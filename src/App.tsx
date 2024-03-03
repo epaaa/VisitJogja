@@ -7,6 +7,7 @@ import useGetData from "./hooks/useGetData"
 import Loading from "./components/loading/Loading"
 import Navigation from "./components/navigation/Navigation"
 import { useState } from "react"
+import useFetchImages from "./hooks/useFetchImages"
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,9 @@ export default function App() {
   // fetch data
   const { places, things, loading } = useGetData()
 
+  // fetch image
+  const { imageDic, loadingImage } = useFetchImages()
+
   // for responsive
   const [responsivePopUp, setResponsivePopUp] = useState(false)
 
@@ -49,10 +53,11 @@ export default function App() {
     things,
     responsivePopUp, 
     setResponsivePopUp,
-    toggleResponsivePopUp
+    toggleResponsivePopUp,
+    imageDic
   }
 
-  if(loading) return <Loading/>
+  if(loading || loadingImage) return <Loading/>
   
   return (
     <DataContext.Provider value={val}>

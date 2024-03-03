@@ -5,7 +5,8 @@ const DefaultDataContext = {
     places:[],
     things:[],
     responsivePopUp:false,
-    toggleResponsivePopUp:()=>{}
+    toggleResponsivePopUp:()=>{},
+    imageDic:{}
 }
 
 export const DataContext = createContext<DataContextInterface>(DefaultDataContext)
