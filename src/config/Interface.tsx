@@ -38,7 +38,8 @@ export interface DataContextInterface {
     things:DataInterface[],
     responsivePopUp:boolean, 
     setResponsivePopUp?:(e:boolean)=>void,
-    toggleResponsivePopUp:()=>void
+    toggleResponsivePopUp:()=>void,
+    imageDic:Dictionary<string>
 }
 
 export interface PlaceCardInterface {
@@ -55,4 +56,8 @@ export interface ThingsToDoSectionInterface {
 export interface ThingsToDoSectionImages {
     url: string;
     name: string;
+}
+
+export interface Dictionary<T> {
+    [key:string]:T
 }
