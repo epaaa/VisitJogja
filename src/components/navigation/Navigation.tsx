@@ -8,7 +8,7 @@ export default function Navigation() {
   const dataContext = useContext(DataContext)
 
   return (
-    <div className={`relative select-none z-20 bg-yellow px-14 ${dataContext.responsivePopUp ? 'h-screen' : ''}`}>
+    <div className={`relative select-none z-[100] bg-yellow px-14 ${dataContext.responsivePopUp ? 'h-screen' : ''}`}>
       <div className="flex justify-between items-center">
         <div className="h-20 flex items-center">
           <Link to='/' className="cursor-pointer text-2xl font-semibold hover:font-bold">JOGJAﾟIN</Link>
