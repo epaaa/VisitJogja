@@ -9,10 +9,11 @@ export default function ThingsToDoSection({activityType, activityDesc, isOutdoor
 
   const [images, setImages] = useState<ThingsToDoSectionImages[]>([]);
 
+
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const imagesRef = ref(storage, "thingsToDo/Indoor/Carousel");
+        const imagesRef = ref(storage, isOutdoor ? "thingsToDo/Outdoor/Carousel" : "thingsToDo/Indoor/Carousel");
         const imageList = await listAll(imagesRef);
         const imageUrls: ThingsToDoSectionImages[] = [];
 
@@ -56,7 +57,7 @@ export default function ThingsToDoSection({activityType, activityDesc, isOutdoor
       </div>
       {
         isOutdoor ? (
-          <div className="w-[250px] h-[250px] max-mobile:w-full max-mobile:h-full carousel rounded-box">
+          <div className="w-[250px] h-[250px] max-mobile:w-full carousel rounded-box">
             {
               images.map((image, index) => (
                 

@@ -8,11 +8,12 @@ import Loading from "./components/loading/Loading"
 import Navigation from "./components/navigation/Navigation"
 import { useState } from "react"
 import useFetchImages from "./hooks/useFetchImages"
+import HomePage from "./pages/michael/HomePage"
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <DefaultPage/>,
+    element: <HomePage/>,
   },
   {
     path: '/eva',
