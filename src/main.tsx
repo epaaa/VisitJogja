@@ -4,11 +4,14 @@ import './index.css'
 import App from './App';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
+import { ThemeProvider } from "@material-tailwind/react";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
       <ParallaxProvider>
-        <App/>
+        <ThemeProvider>
+          <App/>
+        </ThemeProvider>
       </ParallaxProvider>
   </React.StrictMode>,
 )

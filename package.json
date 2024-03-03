@@ -10,13 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
+    "@material-tailwind/react": "^2.1.9",
     "@react-spring/web": "^9.7.3",
     "firebase": "^10.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loading": "^2.0.3",
     "react-router-dom": "^6.22.1",
-    "react-scroll-parallax": "^3.4.5"
+    "react-scroll-parallax": "^3.4.5",
+    "tw-elements": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

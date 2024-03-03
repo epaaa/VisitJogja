@@ -1,5 +1,7 @@
 import Navigation from '../../components/navigation/Navigation';
 import Hanoman from '../../components/hanoman/hanoman';
+import Budgetin_input from './Budgetin_input';
+import Kotak from './Kotak';
 
 function Eva() {
   
@@ -7,6 +9,7 @@ function Eva() {
     <div className="">
       <Navigation/>
       <Hanoman/>
+      <Budgetin_input/>
     </div>
   )
 }
