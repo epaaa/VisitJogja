@@ -51,6 +51,11 @@ export interface ThingsToDoSectionInterface {
     activityType: string;
     activityDesc: string;
     isOutdoor: boolean;
+  }
+
+export interface ThingsToDoSectionImages {
+    url: string;
+    name: string;
 }
 
 export interface Dictionary<T> {
