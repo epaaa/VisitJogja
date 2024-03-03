@@ -1,6 +1,4 @@
-import AnimatedBox from '../SpringAni';
 import PlaceCard from './PlaceCard';
-import { useParallax } from 'react-scroll-parallax';
 
 export default function PlacesToGo() {
   const landmarks = "../../../../public/places_to_go/landmarks.png"
@@ -11,20 +9,9 @@ export default function PlacesToGo() {
   const placesPics = [landmarks, culture, cuisine, accommodation, nature];
   const placesNames = ["LANDMARKS", "CULTURE", "CUISINE", "NATURE", "DWELLINGS"];
 
-  // const sateMuter = useParallax({
-  //   easing: "easeOutQuad",
-  //   // translateX: [0, 300],
-  //   rotate: [0, 360]
-  // });
-
   return (
     <>
       <div className="flex gap-2 justify-center pt-56 relative">
-        {/* <div className="absolute bottom-0 left-0" ref={sateMuter.ref as React.RefObject<HTMLDivElement>} >
-          <img
-            src="../../../../public/food/sate.png" 
-            className="w-[120px] h-[120px] transition duration-300 ease-in-out transform hover:scale-125" alt="" />
-        </div> */}
         <div className="m-8 text-4xl font-bold mt-6 text-brown max-tablet:px-5 max-mobile:px-2">PLACES TO DISCOVER</div>
         
         <i className="fa-solid fa-arrow-right text-3xl mt-7 text-brown"></i>

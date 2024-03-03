@@ -51,3 +51,8 @@ export interface ThingsToDoSectionInterface {
     activityDesc: string;
     isOutdoor: boolean;
   }
+
+export interface ThingsToDoSectionImages {
+    url: string;
+    name: string;
+}
