@@ -5,6 +5,7 @@ const DefaultDataContext = {
     places:[],
     things:[],
     responsivePopUp:false,
+    handleClosePopUpMobile:()=>{},
     toggleResponsivePopUp:()=>{},
     imageDic:{}
 }

@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import NavigationPopUp from "./NavigationPopUp"
 import NavigationPopUpMobile from "./NavigationPopUpMobile"
 import { NavigationItemInterface } from "../../config/Interface"
 import NavigationTemplateItemMobile from "./template/NavigationTemplateItemMobile"
+import { Link } from "react-router-dom"
+import { DataContext } from "../../config/DataContext"
 
 export default function NavigationItem(prop:NavigationItemInterface) {
   
@@ -15,6 +17,8 @@ export default function NavigationItem(prop:NavigationItemInterface) {
   const [popUpOption,setPopUpOption] = useState<boolean>(false)
   const [popUpOptionMobile,setPopUpOptionMobile] = useState<boolean>(false)
   
+  const dataContext = useContext(DataContext)
+
   function handlePopUp() {
     setPopUpOption(!popUpOption)
   }
@@ -28,7 +32,14 @@ export default function NavigationItem(prop:NavigationItemInterface) {
     return (
       <>
         <div onClick={handlePopUpMobile}>
-          <NavigationTemplateItemMobile text={prop.text}/>
+          {
+            navigationDic[prop.text!].length === 0 ? 
+            <Link to='/budget' onClick={dataContext.handleClosePopUpMobile}>
+              <NavigationTemplateItemMobile text={prop.text}/>
+            </Link>
+            :
+            <NavigationTemplateItemMobile text={prop.text}/>
+          }
         </div>
         {
           !popUpOptionMobile || navigationDic[prop.text!].length === 0 ? null :
@@ -41,7 +52,12 @@ export default function NavigationItem(prop:NavigationItemInterface) {
   // NAVIGATION FOR DESKTOP
   return (
     <div onMouseEnter={handlePopUp} onMouseLeave={handlePopUp} className="h-20 p-5 flex items-center justify-between cursor-pointer text-lg font-medium hover:font-bold">
-      <div className="">{prop.text}</div>
+      {
+        navigationDic[prop.text!].length === 0 ? 
+        <Link onClick={dataContext.handleClosePopUpMobile} to='/budget'>{prop.text}</Link>
+        :
+        <div className="">{prop.text}</div>
+      }
       {
         !popUpOption || navigationDic[prop.text!].length === 0 ? null :
         <NavigationPopUp option={navigationDic[prop.text!]}/>
