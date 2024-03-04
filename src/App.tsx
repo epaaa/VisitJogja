@@ -5,10 +5,10 @@ import { DataContext } from "./config/DataContext"
 import ListPage from "./pages/list/ListPage"
 import useGetData from "./hooks/useGetData"
 import Loading from "./components/loading/Loading"
-import Navigation from "./components/navigation/Navigation"
 import { useState } from "react"
 import useFetchImages from "./hooks/useFetchImages"
 import HomePage from "./components/Home/HomePage"
+import BudgetPage from "./pages/budget/BudgetPage"
 
 const router = createBrowserRouter([
   {
@@ -23,10 +23,16 @@ const router = createBrowserRouter([
     path: '/michael',
     element: <Michael/>,
   },
+
   {
     path: '/list/:nav/:navChild',
     element: <ListPage/>
-  }
+  },
+  
+  {
+    path: '/budget',
+    element: <BudgetPage/>
+  },
 ])
 
 export default function App() {
@@ -39,7 +45,7 @@ export default function App() {
 
   // for responsive
   const [responsivePopUp, setResponsivePopUp] = useState(false)
-
+  
   function toggleResponsivePopUp() {
     setResponsivePopUp(!responsivePopUp)
     if (!responsivePopUp) {
@@ -49,11 +55,16 @@ export default function App() {
     }
   }
 
+  function handleClosePopUpMobile() {
+    if(responsivePopUp) toggleResponsivePopUp()
+  }
+
   const val = {
     places,
     things,
     responsivePopUp, 
     setResponsivePopUp,
+    handleClosePopUpMobile,
     toggleResponsivePopUp,
     imageDic
   }

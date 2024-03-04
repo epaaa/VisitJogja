@@ -8,11 +8,11 @@ export default function ListPage() {
     
     return (
         <>
-        <Navigation/>
-        <ListPageAbstract/>
-        <ListCard/>
-        <LikeButton/>
-        <FooterList/>
+            <Navigation/>
+            <ListPageAbstract/>
+            <ListCard/>
+            <LikeButton/>
+            <FooterList/>
         </>
     )
 }

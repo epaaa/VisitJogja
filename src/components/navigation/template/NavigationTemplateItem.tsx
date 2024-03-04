@@ -30,12 +30,8 @@ export default function NavigationTemplateItem(prop:NavigationTemplateItemInterf
 
   const dataContext = useContext(DataContext)
   
-  function handleClosePopUpMobile() {
-    if(dataContext.responsivePopUp) dataContext.toggleResponsivePopUp()
-  }
-
   return (
-    <Link onClick={handleClosePopUpMobile} to={`/list/${nav}/${prop.text}`} className="flex items-center justify-between cursor-pointer text-lg font-medium hover:font-bold">
+    <Link onClick={dataContext.handleClosePopUpMobile} to={`/list/${nav}/${prop.text}`} className="flex items-center justify-between cursor-pointer text-lg font-medium hover:font-bold">
         <div className="">{prop.text}</div>
         <div className="fa-solid fa-arrow-right"></div>
     </Link>
