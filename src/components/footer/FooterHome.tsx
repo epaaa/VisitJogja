@@ -3,17 +3,17 @@ export default function FooterHome() {
     const tunas = '../../../../public/footer/tunas1.png';
   
     return <>
-        <div className="flex flex-col absolute bottom-0">
+        <div className="flex flex-col bottom-0">
             <div className="flex justify-center">
                 <img
-                    src={tunas} // Replace with the actual link to your picture
+                    src={tunas} 
                     alt="footer image"
                     className="w-8"
                 />
             </div>
             
             <img
-                src={diamond} // Replace with the actual link to your picture
+                src={diamond} 
                 alt="footer image"
                 className="w-full object-cover object-center h-20"
             />

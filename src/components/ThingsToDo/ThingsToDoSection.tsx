@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { ThingsToDoSectionImages, ThingsToDoSectionInterface } from "../../../config/Interface";
+import { ThingsToDoSectionImages, ThingsToDoSectionInterface } from "../../config/Interface";
 import { Link } from "react-router-dom"
 import "firebase/storage";
-import { storage } from "../../../config/Firebase";
+import { storage } from "../../config/Firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 
 export default function ThingsToDoSection({activityType, activityDesc, isOutdoor} : ThingsToDoSectionInterface) {
@@ -36,6 +36,13 @@ export default function ThingsToDoSection({activityType, activityDesc, isOutdoor
     fetchImages();
   }, [])
 
+  let thingsToDoUrl;
+  if(isOutdoor) {
+    thingsToDoUrl = "/list/thingsToDo/Outdoor"
+  } else {
+    thingsToDoUrl = "/list/thingsToDo/Indoor"
+  }
+
   return (
     <div className="flex gap-1 justify-center pt-4 pr-12 pl-16 m-2 max-mobile:flex-col max-mobile:justify-center">
       <div className="flex-col p-4 basis-1/2 max-mobile:text-center">
@@ -46,7 +53,7 @@ export default function ThingsToDoSection({activityType, activityDesc, isOutdoor
         <p className="text-brown">{activityDesc}</p>
 
         
-        <Link to="/" className="flex max-mobile:justify-center">
+        <Link to={thingsToDoUrl} className="flex max-mobile:justify-center">
           <div className="bg-white rounded-full w-32 h-12 mt-2 border-2 p-3 border-brown hover:bg-brown text-brown hover:text-yellow">
             <div className="flex gap-3 items-center justify-between">
               <div className="text-center font-semibold">See all</div>
@@ -69,28 +76,16 @@ export default function ThingsToDoSection({activityType, activityDesc, isOutdoor
             }
           </div>
         ) : (
-          <div className="w-[250px] h-[250px] max-mobile:w-full max-mobile:h-full carousel rounded-box">
-            <div className="carousel-item w-full">
-              <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-            </div> 
-            <div className="carousel-item w-full">
-              <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-            </div> 
-            <div className="carousel-item w-full">
-              <img src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-            </div> 
-            <div className="carousel-item w-full">
-              <img src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-            </div> 
-            <div className="carousel-item w-full">
-              <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-            </div> 
-            <div className="carousel-item w-full">
-              <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-            </div> 
-            <div className="carousel-item w-full">
-              <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-            </div>
+          <div className="w-[250px] h-[250px] max-mobile:w-full carousel rounded-box">
+            {
+              images.map((image, index) => (
+                
+                <div key={index} className="carousel-item w-full h-full">
+                  <img src={image.url} alt={image.name} className="w-full h-full object-cover object-center" />
+                </div> 
+
+              ))
+            }
           </div>
         )
       }

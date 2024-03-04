@@ -1,6 +1,6 @@
-import PlacesToGo from './placeCardComponents/PlacesToGo'
-import ThingsToDo from './thingsToDoComponents/ThingsToDo'
-import HomePage from './HomePage'
+import PlacesToGo from '../../components/PlacesToGo/PlacesToGo'
+import ThingsToDo from '../../components/ThingsToDo/ThingsToDo'
+import HomePage from '../../components/Home/HomePage'
 import Navigation from '../../components/navigation/Navigation'
 
 export default function Michael() {

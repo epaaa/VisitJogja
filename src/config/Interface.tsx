@@ -45,6 +45,7 @@ export interface DataContextInterface {
 export interface PlaceCardInterface {
     placeName: string;
     placePic:  string;
+    placeURL: string;
 } 
 
 export interface ThingsToDoSectionInterface {

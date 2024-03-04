@@ -8,7 +8,7 @@ import Loading from "./components/loading/Loading"
 import Navigation from "./components/navigation/Navigation"
 import { useState } from "react"
 import useFetchImages from "./hooks/useFetchImages"
-import HomePage from "./pages/michael/HomePage"
+import HomePage from "./components/Home/HomePage"
 
 const router = createBrowserRouter([
   {
@@ -65,21 +65,4 @@ export default function App() {
       <RouterProvider router={router} />
     </DataContext.Provider>
   ) 
-}
-
-function DefaultPage(){
-  return (
-    <>
-      <Navigation/>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-        <div className="grid">
-          <br/>
-          <Link className="text-yellow" to='/eva'>eva</Link>
-          <Link className="text-green" to='/list/placesToGo/Culture'>testing accommodation</Link>
-          <Link className="text-brown" to='/michael'>michael</Link>
-        </div>
-      </h1>
-    </>
-  )
 }
