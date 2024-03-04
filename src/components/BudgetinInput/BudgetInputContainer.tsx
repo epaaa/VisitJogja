@@ -5,7 +5,7 @@ import { BudgetContext } from "../../config/BudgetContext";
 
 export default function BudgetInputContainer() {
 
-  const [isAuto, setIsAuto] = useState<boolean>(false)
+  const [isAuto, setIsAuto] = useState<boolean>(true)
 
   function handleToogle(){
     setIsAuto(!isAuto)

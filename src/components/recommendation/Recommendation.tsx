@@ -10,7 +10,7 @@ export default function Recommendation() {
     const tourismSpotArr = [
         ...dataContext.places.filter(item => item.navbarChild === 'Culture'),
         ...dataContext.places.filter(item => item.navbarChild === 'Landmark')
-      ];
+    ]
 
     return <>
     <div className="flex justify-center p-5">

@@ -9,6 +9,7 @@ import { useState } from "react"
 import useFetchImages from "./hooks/useFetchImages"
 import HomePage from "./components/Home/HomePage"
 import BudgetPage from "./pages/budget/BudgetPage"
+import { Toaster } from "react-hot-toast"
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ export default function App() {
   return (
     <DataContext.Provider value={val}>
       <RouterProvider router={router} />
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
     </DataContext.Provider>
   ) 
 }
