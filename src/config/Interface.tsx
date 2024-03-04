@@ -62,3 +62,13 @@ export interface ThingsToDoSectionImages {
 export interface Dictionary<T> {
     [key:string]:T
 }
+
+export interface BudgetinCardInterface {
+    pic: string;
+    title: string;
+}
+
+export interface BudgetinCardImages {
+    url: string;
+    name: string;
+}
