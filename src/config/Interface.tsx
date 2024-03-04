@@ -39,6 +39,7 @@ export interface DataContextInterface {
     responsivePopUp:boolean, 
     setResponsivePopUp?:(e:boolean)=>void,
     toggleResponsivePopUp:()=>void,
+    handleClosePopUpMobile:()=>void,
     imageDic:Dictionary<string>
 }
 
