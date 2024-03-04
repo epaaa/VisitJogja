@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import AutoBudgetin from "./AutoBudgetin";
 import CustomizeBudgetin from "./CustomizeBudgetin";
+import { BudgetContext } from "../../config/BudgetContext";
 
 export default function BudgetInputContainer() {
 
@@ -9,6 +10,8 @@ export default function BudgetInputContainer() {
   function handleToogle(){
     setIsAuto(!isAuto)
   }
+
+  const budgetContext = useContext(BudgetContext)
   
   return (
     <div className="p-5 flex flex-col justify-center items-center">
@@ -34,7 +37,7 @@ export default function BudgetInputContainer() {
         </div>
       </div>
       
-      <div className="bg-white rounded-full border-2 p-3 mt-5 border-brown hover:bg-brown text-brown hover:text-yellow">
+      <div onClick={budgetContext.handleRecommendation!} className="bg-white rounded-full border-2 p-3 mt-5 border-brown hover:bg-brown text-brown hover:text-yellow">
         <div className="flex gap-3 items-center justify-between">
         <div className="text-center">Give me recommendation</div>
         <i className="fa-solid fa-arrow-right text-1xl"></i>
