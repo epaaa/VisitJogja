@@ -18,9 +18,9 @@ export default function Recommendation() {
             <p className="text-brown text-3xl font-bold max-mobile:text-lg">
                 RECOMMENDATION ↓ ↓
             </p>
-            <RecommendationCard recommendation={accommodationArr} />
-            <RecommendationCard recommendation={restaurantArr} />
-            <RecommendationCard recommendation={tourismSpotArr} />
+            <RecommendationCard recommendation={accommodationArr} title={"Hotels"} />
+            <RecommendationCard recommendation={restaurantArr} title={"Restaurants"} />
+            <RecommendationCard recommendation={tourismSpotArr} title={"Tourism Spots"} />
 
 
         </div>

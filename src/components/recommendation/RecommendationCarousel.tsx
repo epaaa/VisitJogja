@@ -5,8 +5,8 @@ export default function RecommendationCard({recommendation}: {recommendation: Da
  
     return <>
         <div className="carousel carousel-center max-w-xl p-4 space-x-4">
-        {recommendation.map(item => (
-            <RecommendationCarouselCard recommendation={item}/>
+        {recommendation.map((item, key) => (
+            <RecommendationCarouselCard key={key} recommendation={item}/>
         ))}
 
             
