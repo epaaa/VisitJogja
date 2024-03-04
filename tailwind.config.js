@@ -10,7 +10,8 @@ export default {
       cream:"#fdf5ea",
       yellow:"#eec456",
       brown:"#3F3B38",
-      green:"#97bb61"
+      green:"#97bb61",
+      white:"#ffffff"
     },
     fontFamily:{
       body:["Poppins"]

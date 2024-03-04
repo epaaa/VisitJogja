@@ -1,11 +1,12 @@
+import { DataInterface } from "../../config/Interface";
 import RecommendationCarousel from "./RecommendationCarousel";
 
-export default function RecommendationCard({ title }: { title: string }) {
+export default function RecommendationCard({recommendation}: {recommendation: DataInterface[]}) {
     
     return <>
     <div className=" flex flex-col">
                 <p className="text-brown text-xl font-semibold max-mobile:text-sm">
-                    {title}
+                    {recommendation[0].navbarChild}
                 </p>
                 <div className="flex gap-2 justify-center">
                     <button
@@ -17,7 +18,7 @@ export default function RecommendationCard({ title }: { title: string }) {
                     </button>
                     
                     <div className="flex">
-                        <RecommendationCarousel/>
+                        <RecommendationCarousel recommendation={recommendation} />
                     </div>
                     <button
                         onClick={()=>{}}
