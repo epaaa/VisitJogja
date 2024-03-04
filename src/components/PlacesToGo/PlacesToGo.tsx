@@ -1,13 +1,13 @@
+import { useContext } from 'react';
 import PlaceCard from './PlaceCard';
+import { DataContext } from '../../config/DataContext';
 
 export default function PlacesToGo() {
-  const landmarks = "../../../../public/places_to_go/landmarks.png"
-  const cuisine = "../../../../public/places_to_go/cuisine.png"
-  const accommodation = '../../../../public/places_to_go/accomodation.png';
-  const nature = '../../../../public/places_to_go/nature.jpg';
-  const culture = '../../../../public/places_to_go/cultures.jpg';
-  const placesPics = [landmarks, culture, cuisine, nature, accommodation];
+
+  const dataContext = useContext(DataContext);
   const placesNames = ["LANDMARKS", "CULTURE", "CUISINE", "NATURE", "DWELLINGS"];
+
+  
 
   return (
     <>
@@ -20,15 +20,15 @@ export default function PlacesToGo() {
       <div className="flex flex-col gap-4 justify-center">
         <div className="flex justify-center gap-4 mt-8 max-mobile:flex-wrap">
 
-          <PlaceCard placeName={placesNames[0]} placePic={placesPics[0]} placeURL='/list/placesToGo/Landmarks'/>
-          <PlaceCard placeName={placesNames[1]} placePic={placesPics[1]} placeURL='/list/placesToGo/Culture'/>
+          <PlaceCard placeName={placesNames[0]} placePic={dataContext.imageDic['landmarks.png']} placeURL='/list/placesToGo/Landmarks'/>
+          <PlaceCard placeName={placesNames[1]} placePic={dataContext.imageDic['cultures.jpg']} placeURL='/list/placesToGo/Culture'/>
           
         </div>
         <div className="flex justify-center gap-4 max-mobile:flex-wrap ">
           
-          <PlaceCard placeName={placesNames[2]} placePic={cuisine} placeURL='/list/placesToGo/Cuisine'/>
-          <PlaceCard placeName={placesNames[3]} placePic={placesPics[3]} placeURL='/list/placesToGo/Nature'/>
-          <PlaceCard placeName={placesNames[4]} placePic={placesPics[4]} placeURL='/list/placesToGo/Accommodation'/>
+          <PlaceCard placeName={placesNames[2]} placePic={dataContext.imageDic['cuisine.png']} placeURL='/list/placesToGo/Cuisine'/>
+          <PlaceCard placeName={placesNames[3]} placePic={dataContext.imageDic['nature.jpg']} placeURL='/list/placesToGo/Nature'/>
+          <PlaceCard placeName={placesNames[4]} placePic={dataContext.imageDic['accomodation.png']} placeURL='/list/placesToGo/Accommodation'/>
 
         </div>
       </div>
