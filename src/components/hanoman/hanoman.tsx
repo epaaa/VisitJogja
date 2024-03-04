@@ -3,7 +3,7 @@ export default function Hanoman() {
     const text = "Unlock budget-friendly travel with our Jogja Budget’In";
   
     return <>
-        <div className="flex justify-center gap-4 mt-8 max-mobile:flex-wrap">
+        <div className="flex justify-center gap-10 mt-8 max-mobile:flex-wrap">
             <div className="w-48 h-48 flex flex-col justify-center">
                 <img src={hanoman} className='object-cover rounded-lg max-tablet:w-[200px] max-tablet:h-[200px]'></img>
             </div>
