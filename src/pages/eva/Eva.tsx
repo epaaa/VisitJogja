@@ -1,14 +1,12 @@
 import Navigation from '../../components/navigation/Navigation';
-import Hanoman from '../../components/hanoman/hanoman';
-import JogjaBudgetin from '../../components/jogjaBudgetin/JogjaBudgetin';
+import Recommendation from '../../components/recommendation/Recommendation';
 
 function Eva() {
   
   return (
     <div className="m-0 p-0">
       <Navigation/>
-      <Hanoman/>
-      <JogjaBudgetin/>
+      <Recommendation/>
     </div>
   )
 }
