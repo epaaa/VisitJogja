@@ -1,6 +1,6 @@
 import Navigation from '../../components/navigation/Navigation';
 import Hanoman from '../../components/hanoman/hanoman';
-import JogjaBudgetin from './JogjaBudgetin';
+import JogjaBudgetin from '../../components/jogjaBudgetin/JogjaBudgetin';
 
 function Eva() {
   
