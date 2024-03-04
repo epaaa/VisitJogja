@@ -40,8 +40,11 @@ export default function BudgetPage() {
       <BudgetContext.Provider value={val}>
         <Navigation/>
         <Hanoman/>
+        <div className="mb-10"></div>
         <BudgetInputContainer/>
+        <div className="mb-10"></div>
         <Recommendation/>
+        <div className="mb-10"></div>
         <FooterBudgetin/>
       </BudgetContext.Provider>
     </>

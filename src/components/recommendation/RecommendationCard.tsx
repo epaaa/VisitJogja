@@ -5,7 +5,7 @@ export default function RecommendationCard({title, recommendation}: {title: Stri
     
     return <>
     <div className=" flex flex-col">
-                <p className="text-brown text-xl font-semibold max-mobile:text-sm">
+                <p className="text-brown text-xl font-normal max-mobile:text-sm text-center">
                     {title}
                 </p>
                 <div className="flex gap-2 justify-center">
