@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import BudgetInputContainer from "../../components/BudgetinInput/BudgetInputContainer";
 import FooterBudgetin from "../../components/footer/FooterBudgetin";
 import Hanoman from "../../components/hanoman/hanoman";
@@ -11,6 +11,11 @@ import { DataInterface } from "../../config/Interface";
 import BudgetinBackdrop from "../../components/Home/BudgetinBackdrop";
 
 export default function BudgetPage() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
 
   // auto budgetin
   const [budget, setBudget] = useState<number>(0)
