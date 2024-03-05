@@ -73,3 +73,8 @@ export interface BudgetinCardImages {
     url: string;
     name: string;
 }
+
+export interface OuterPopUpInterface {
+    data : DataInterface,
+    handlePopUp:()=>void
+}
