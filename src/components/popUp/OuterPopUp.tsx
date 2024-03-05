@@ -6,7 +6,7 @@ export default function OuterPopUp(prop:OuterPopUpInterface) {
     return (
     <>
         <div>
-            <div className="flex z-40 fixed inset-0 bg-brown bg-opacity-50"></div>
+            <div onClick={prop.handlePopUp} className="flex z-40 fixed inset-0 bg-brown bg-opacity-50"></div>
             <div className="flex">            
                 <div className="flex shrink-0 bg-cream m-5 z-50 fixed inset-0 p-8 rounded-lg shadow-lg overflow-hidden">
                     <button onClick={prop.handlePopUp} className="absolute top-4 right-4 text-brown">
