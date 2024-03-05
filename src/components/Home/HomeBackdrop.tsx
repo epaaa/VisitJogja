@@ -9,6 +9,9 @@ export default function HomeBackdrop() {
     <div>
       <div className="w-fit h-[1100px] max-tablet:h-[700px] max-mobile:h-[350px] bg-yellow mb-32">
         <div className="relative w-screen">
+
+            {/* matahari */}
+            <div className="absolute drop-shadow-glow w-[700px] h-[700px] top-32 right-20 max-mobile:w-[270px] max-mobile:h-[270px]  bg-white max-mobile:top-0 max-mobile:right-0 rounded-full z-0"></div>
           {/* gunung */}
             <div className="absolute top-52 right-0 z-0 max-mobile:top-28">
               <img src={dataContext.imageDic['gunung.png']} 

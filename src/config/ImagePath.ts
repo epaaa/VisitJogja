@@ -18,4 +18,11 @@ export const ImagePath : Dictionary<string> = {
     'cultures.jpg': '/assets/places_to_go/cultures.jpg',
     'landmarks.png': '/assets/places_to_go/landmarks.png',
     'nature.jpg': '/assets/places_to_go/nature.jpg',
+    'Hotels.png': '/assets/budgetin/Hotels.png',
+    'Restaurants.png': '/assets/budgetin/Restaurants.png',
+    'Tourism Spots.png': '/assets/budgetin/Tourism Spots.png',
+    'angkringan.png': '/assets/budgetin/header/angkringan.png',
+    'becak.png': '/assets/budgetin/header/becak.png',
+    'kursi.png': '/assets/budgetin/header/kursi.png',
+    'pohon_besar.png': '/assets/budgetin/header/pohon_besar.png',
 }

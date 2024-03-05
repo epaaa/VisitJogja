@@ -8,6 +8,7 @@ import Recommendation from "../../components/recommendation/Recommendation";
 import { DataContext } from "../../config/DataContext";
 import toast from "react-hot-toast";
 import { DataInterface } from "../../config/Interface";
+import BudgetinBackdrop from "../../components/Home/BudgetinBackdrop";
 
 export default function BudgetPage() {
 
@@ -107,6 +108,7 @@ export default function BudgetPage() {
     <>
       <BudgetContext.Provider value={val}>
         <Navigation/>
+        <BudgetinBackdrop/>
         <Hanoman/>
         <div className="mb-10"></div>
         <BudgetInputContainer/>
