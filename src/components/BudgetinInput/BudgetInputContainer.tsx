@@ -37,7 +37,7 @@ export default function BudgetInputContainer() {
         </div>
       </div>
       
-      <div onClick={budgetContext.handleRecommendation!} className="bg-white rounded-full border-2 p-3 mt-5 border-brown hover:bg-brown text-brown hover:text-yellow">
+      <div onClick={budgetContext.handleRecommendation!} className="bg-cream rounded-full border-2 px-5 py-3 mt-8 border-brown hover:bg-green text-brown hover:text-cream">
         <div className="flex gap-3 items-center justify-between">
         <div className="text-center">Give me recommendation</div>
         <i className="fa-solid fa-arrow-right text-1xl"></i>
