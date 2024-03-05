@@ -10,8 +10,8 @@ export default function ThingsToDo() {
       </div>
 
       <div className="mt-5">
-        <ThingsToDoSection activityType="OUTDOOR" activityDesc="Some activities are best done indoor!" isOutdoor={true}/>
-        <ThingsToDoSection activityType="INDOOR" activityDesc="Some activities are best done outdoor!" isOutdoor={false}/>
+        <ThingsToDoSection activityType="OUTDOOR" activityDesc="Explore the great outdoors and enjoy exciting adventures under the open sky!" isOutdoor={true}/>
+        <ThingsToDoSection activityType="INDOOR" activityDesc="Discover indoor attractions and delve into cultural experiences in the comfort of covered spaces!" isOutdoor={false}/>
       </div>
         
     </>

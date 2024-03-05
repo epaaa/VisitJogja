@@ -5,11 +5,17 @@ import Navigation from "../navigation/Navigation";
 import HomePageAbstract from "../HomePageAbstract/HomePageAbstract";
 import HomeBackdrop from "./HomeBackdrop";
 import JogjaBudgetin from "../jogjaBudgetin/JogjaBudgetin";
+import { useEffect } from "react";
 // import { animated, useSpring } from '@react-spring/web';
 
 
 export default function HomePage() {
   
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
 
