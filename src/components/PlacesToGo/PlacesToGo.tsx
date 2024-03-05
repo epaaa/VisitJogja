@@ -18,7 +18,7 @@ export default function PlacesToGo() {
       <div className="flex flex-col gap-4 justify-center">
         <div className="flex justify-center gap-4 mt-8 max-mobile:flex-wrap">
 
-          <PlaceCard placeName={placesNames[0]} placePic={dataContext.imageDic['landmarks.png']} placeURL='/list/placesToGo/Landmarks'/>
+          <PlaceCard placeName={placesNames[0]} placePic={dataContext.imageDic['landmarks.png']} placeURL='/list/placesToGo/Landmark'/>
           <PlaceCard placeName={placesNames[1]} placePic={dataContext.imageDic['cultures.jpg']} placeURL='/list/placesToGo/Culture'/>
           
         </div>
