@@ -1,11 +1,15 @@
+import { useContext } from "react"
+import { DataContext } from "../../config/DataContext"
+
 export default function FooterBudgetin() {
-    const floral = '../../../../public/footer/pattern_floral.png';
-  
+
+    const dataContext = useContext(DataContext)
+    
     return <>
         <div className="flex flex-col">
             
             <img
-                src={floral} // Replace with the actual link to your picture
+                src={dataContext.imageDic['pattern_floral.png']} 
                 alt="footer image"
                 className="w-full object-cover object-center h-20"
             />
