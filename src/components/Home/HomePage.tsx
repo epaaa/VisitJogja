@@ -12,6 +12,8 @@ export default function HomePage() {
   
   return (
     <>
+
+    
       <Navigation/>
       <HomeBackdrop/>
       <HomePageAbstract/>
