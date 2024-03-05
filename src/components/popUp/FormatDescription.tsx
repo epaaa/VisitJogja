@@ -9,7 +9,7 @@ export default function FormatDescription({ desc }: { desc: string }) {
       return (
         <>
           {finalPart.map((part, index) => (
-            part === '.' ? <br/> : <div key={index}>{part}</div>
+            part === '.' ? <br key={index}/> : <div key={index}>{part}</div>
           ))}
         </>
       )
