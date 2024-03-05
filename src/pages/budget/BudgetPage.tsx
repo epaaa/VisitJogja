@@ -25,13 +25,14 @@ export default function BudgetPage() {
   const restaurantArr = dataContext.places.filter(item => item.navbarChild === 'Cuisine')
   const tourismSpotArr = [
       ...dataContext.places.filter(item => item.navbarChild === 'Culture'),
-      ...dataContext.places.filter(item => item.navbarChild === 'Landmark')
+      ...dataContext.places.filter(item => item.navbarChild === 'Landmark'),
+      ...dataContext.places.filter(item => item.navbarChild === 'Nature')
   ]
 
   // data storing
-  const [accommodationData, setAccommodationData] = useState<DataInterface[]>([])
-  const [restaurantData, setRestaurantData] = useState<DataInterface[]>([])
-  const [tourismData, setTourismData] = useState<DataInterface[]>([])
+  const [accommodationData, setAccommodationData] = useState<DataInterface[]>(accommodationArr)
+  const [restaurantData, setRestaurantData] = useState<DataInterface[]>(restaurantArr)
+  const [tourismData, setTourismData] = useState<DataInterface[]>(tourismSpotArr)
 
   function handleRecommendation() {
     if(night === 0) {
@@ -42,8 +43,6 @@ export default function BudgetPage() {
     const accommodationRatio = 1 * night
     const restaurantRatio = 3 * night
     const tourismRatio = 1 * night
-    
-    console.log(budget)
     
     // auto budgetin
     if(budget !== 0 && !isNaN(budget)) {
@@ -57,9 +56,9 @@ export default function BudgetPage() {
       const pricePercentage = Math.floor(budget * 0.33)
       console.log(pricePercentage)
       
-      const accommodationPrice = accommodationArr.filter(item => item.price * accommodationRatio <= pricePercentage)
-      const restaurantPrice = restaurantArr.filter(item => item.price * restaurantRatio <= pricePercentage)
-      const tourismPrice = tourismSpotArr.filter(item => item.price * tourismRatio <= pricePercentage)
+      const accommodationPrice = accommodationArr.filter(item => item.price * accommodationRatio <= pricePercentage && item.price !== 0)
+      const restaurantPrice = restaurantArr.filter(item => item.price * restaurantRatio <= pricePercentage && item.price !== 0)
+      const tourismPrice = tourismSpotArr.filter(item => item.price * tourismRatio <= pricePercentage && item.price !== 0)
       
       setAccommodationData(accommodationPrice)
       setRestaurantData(restaurantPrice)
@@ -73,18 +72,14 @@ export default function BudgetPage() {
       return
     }
 
-    const accommodationPrice = accommodationArr.filter(item => item.price * accommodationRatio <= accommodation)
-    const restaurantPrice = restaurantArr.filter(item => item.price * restaurantRatio <= food)
-    const tourismPrice = tourismSpotArr.filter(item => item.price * tourismRatio <= touring)
+    const accommodationPrice = accommodationArr.filter(item => item.price * accommodationRatio <= accommodation && item.price !== 0)
+    const restaurantPrice = restaurantArr.filter(item => item.price * restaurantRatio <= food && item.price !== 0)
+    const tourismPrice = tourismSpotArr.filter(item => item.price * tourismRatio <= touring && item.price !== 0)
 
     setAccommodationData(accommodationPrice)
     setRestaurantData(restaurantPrice)
     setTourismData(tourismPrice)
   } 
-
-  console.log(accommodationData)
-  console.log(restaurantData)
-  console.log(tourismData)
 
   const val = {
     budget, 
