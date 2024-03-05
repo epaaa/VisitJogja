@@ -7,7 +7,7 @@ const DefaultDataContext = {
     responsivePopUp:false,
     handleClosePopUpMobile:()=>{},
     toggleResponsivePopUp:()=>{},
-    imageDic:{}
+    imageDic:{},
 }
 
 export const DataContext = createContext<DataContextInterface>(DefaultDataContext)

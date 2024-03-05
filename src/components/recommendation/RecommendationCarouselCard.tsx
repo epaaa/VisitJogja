@@ -11,7 +11,7 @@ export default function RecommendationCarouselCard({recommendation}: {recommenda
     return (
         <>
             <div onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={handleHover} className="relative carousel-item flex flex-col overflow-hidden">
-                <img src={recommendation.image} className="relative rounded-box w-40 h-36 object-cover z-0" />
+                <img src={recommendation.image} className="relative rounded-box max-mobile:w-40 max-mobile:h-36 w-48 h-44 object-cover z-0" />
 
                 {
                     !hovered ? null : 
