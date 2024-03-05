@@ -5,6 +5,8 @@ export const ImagePath : Dictionary<string> = {
     'ornament.png':'/assets/list_page/ornament.png',
     'wayang-gunungan.png':'/assets/list_page/wayang-gunungan.png',
     'frame.png': '/assets/home/frame.png',
+    'frame_without_shadow.png': '/assets/home/frame_without_shadow.png',
+    'shadow.png': '/assets/home/shadow.png',
     'gunung.png': '/assets/home/gunung.png',
     'keraton.png': '/assets/home/keraton.png',
     'malioboro.png': '/assets/home/malioboro.png',
