@@ -1,8 +1,12 @@
 import { OuterPopUpInterface } from "../../config/Interface";
+import useKeyPressed from "../../hooks/useKeyPressed";
 import FormatDescription from "./FormatDescription";
 
 export default function OuterPopUp(prop:OuterPopUpInterface) {
     
+    const escapePressed = useKeyPressed('Escape')
+    if(escapePressed) prop.handlePopUp()
+
     return (
     <>
         <div>
