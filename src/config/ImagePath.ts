@@ -23,4 +23,11 @@ export const ImagePath : Dictionary<string> = {
     'pattern_floral.png': '/assets/footer/pattern_floral.png',
     'pattern_parang.png': '/assets/footer/pattern_parang.png',
     'tunas1.png': '/assets/footer/tunas1.png',
+    'Hotels.png': '/assets/budgetin/Hotels.png',
+    'Restaurants.png': '/assets/budgetin/Restaurants.png',
+    'Tourism Spots.png': '/assets/budgetin/Tourism Spots.png',
+    'angkringan.png': '/assets/budgetin/header/angkringan.png',
+    'becak.png': '/assets/budgetin/header/becak.png',
+    'kursi.png': '/assets/budgetin/header/kursi.png',
+    'pohon_besar.png': '/assets/budgetin/header/pohon_besar.png',
 }

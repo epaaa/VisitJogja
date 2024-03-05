@@ -19,8 +19,18 @@ export default {
     screens: {
       'mobile': '600px',
       'tablet': '800px',
+<<<<<<< HEAD
       'laptop': '1000px',
       'extra_screen': '1900px',
+=======
+      'laptop': '1000px'
+    },
+    dropShadow: {
+      glow: [
+        "0 0px 200px rgba(255,255, 255, 0.35)",
+        "0 0px 65px rgba(255, 255,255, 0.2)"
+      ]
+>>>>>>> dca1903cfc4206cef864d21882f96233fb92cf1c
     }
   },
   plugins: [require("daisyui")],
