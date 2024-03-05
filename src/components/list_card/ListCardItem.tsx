@@ -9,6 +9,11 @@ export default function ListCardItem(prop:DataInterface) {
 
   function handlePopUp() {
     setPopUp(!popUp)
+    if (!popUp) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
   }
 
   function handleLike(){
