@@ -19,7 +19,8 @@ export default {
     screens: {
       'mobile': '600px',
       'tablet': '800px',
-      'laptop': '1000px'
+      'laptop': '1000px',
+      'extra_screen': '1900px',
     }
   },
   plugins: [require("daisyui")],
