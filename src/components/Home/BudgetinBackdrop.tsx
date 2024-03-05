@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { DataContext } from "../../config/DataContext";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 
 export default function BudgetinBackdrop() {
