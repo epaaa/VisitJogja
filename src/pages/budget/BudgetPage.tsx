@@ -54,7 +54,6 @@ export default function BudgetPage() {
       }
       
       const pricePercentage = Math.floor(budget * 0.33)
-      console.log(pricePercentage)
       
       const accommodationPrice = accommodationArr.filter(item => item.price * accommodationRatio <= pricePercentage && item.price !== 0)
       const restaurantPrice = restaurantArr.filter(item => item.price * restaurantRatio <= pricePercentage && item.price !== 0)

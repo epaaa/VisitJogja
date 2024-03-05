@@ -1,11 +1,15 @@
+import { useContext } from "react"
+import { DataContext } from "../../config/DataContext"
+
 export default function FooterList() {
-    const parang = '../../../../public/footer/pattern_parang.png';
-  
+
+    const dataContext = useContext(DataContext)
+
     return <>
         <div className="flex flex-col ">
             
             <img
-                src={parang} // Replace with the actual link to your picture
+                src={dataContext.imageDic['pattern_parang.png']} 
                 alt="footer image"
                 className="w-full object-cover object-center h-20"
             />

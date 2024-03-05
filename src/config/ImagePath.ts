@@ -18,4 +18,9 @@ export const ImagePath : Dictionary<string> = {
     'cultures.jpg': '/assets/places_to_go/cultures.jpg',
     'landmarks.png': '/assets/places_to_go/landmarks.png',
     'nature.jpg': '/assets/places_to_go/nature.jpg',
+    'hanoman.jpg': '/assets/budgetin_page/hanoman.jpg',
+    'pattern_diamond.png': '/assets/footer/pattern_diamond.png',
+    'pattern_floral.png': '/assets/footer/pattern_floral.png',
+    'pattern_parang.png': '/assets/footer/pattern_parang.png',
+    'tunas1.png': '/assets/footer/tunas1.png',
 }
