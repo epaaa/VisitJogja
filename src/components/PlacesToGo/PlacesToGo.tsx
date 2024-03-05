@@ -7,8 +7,6 @@ export default function PlacesToGo() {
   const dataContext = useContext(DataContext);
   const placesNames = ["LANDMARKS", "CULTURE", "CUISINE", "NATURE", "DWELLINGS"];
 
-  
-
   return (
     <>
       <div className="flex gap-2 justify-center pt-32 relative">

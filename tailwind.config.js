@@ -14,7 +14,7 @@ export default {
       white:"#ffffff"
     },
     fontFamily:{
-      body:["Poppins"]
+      body:["Montserrat"]
     },
     screens: {
       'mobile': '600px',
