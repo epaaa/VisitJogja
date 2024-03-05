@@ -4,6 +4,7 @@ import { storage } from "../../config/Firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { BudgetinCardImages } from "../../config/Interface";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function JogjaBudgetin() {
     const [images, setImages] = useState<BudgetinCardImages[]>([]);
@@ -51,12 +52,12 @@ export default function JogjaBudgetin() {
 
                         </div>
                         <div className="flex ">
-                            <button className="py-2 px-4 rounded-full outline outline-1 outline-brown ">
+                            <Link to='/budget' className="py-2 px-4 rounded-full outline outline-1 outline-brown ">
                                 <div className="text-brown font-bold text-sm max-mobile:text-xs">
                                     Try now →
                                 </div>
                                 
-                            </button>
+                            </Link>
                         </div>
 
                     </div>
