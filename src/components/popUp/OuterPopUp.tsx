@@ -25,6 +25,10 @@ export default function OuterPopUp(prop:OuterPopUpInterface) {
                         
                         <div className="flex flex-col gap-5 flex-1 h-2/3 w-full p-5 overflow-auto scrollbar text-brown text-left">
                             <h1 className="text-2xl font-bold">{prop.data.name}</h1>
+                            
+                            <div className="text-sm text-justify">
+                                <FormatDescription desc={prop.data.description}/>
+                            </div>    
     
                             {
                                 prop.data.address === '' ? null : 
@@ -42,9 +46,6 @@ export default function OuterPopUp(prop:OuterPopUpInterface) {
                                 </div>
                             }
     
-                            <div className="text-sm text-justify">
-                                <FormatDescription desc={prop.data.description}/>
-                            </div>    
                         </div>     
                         
                     </div>

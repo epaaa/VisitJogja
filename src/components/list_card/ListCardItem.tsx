@@ -31,7 +31,7 @@ export default function ListCardItem(prop:DataInterface) {
       
         <div className="h-[68%] flex flex-col justify-between p-5">
           <div className="grid gap-3">
-            <div className="font-bold text-lg">{prop.name}</div>
+            <div className="font-bold text-lg truncate">{prop.name}</div>
 
             <div className="max-w-full flex items-center justify-start gap-4 truncate">
               <i className="fa-solid fa-note-sticky"></i>
